@@ -1,14 +1,13 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Login from './Login';
-import SignUp from './SignUp';
-
+import SignUpPage from './SignUpPage';
+import LoginPage from './LoginPage';
 
 const Main = () => (
     <main>
         <Switch>
-            <Route exact path='/' component={Login}/>
-            <Route exact path='/SignUp' component={SignUp}/>
+            <Route exact path='/' component={LoginPage}/>
+            <Route exact path='/SignUp' component={SignUpPage}/>
         </Switch>
     </main>
 );
