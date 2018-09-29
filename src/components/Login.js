@@ -9,15 +9,10 @@ class Login extends Component {
       password: ''
     };
   }
-  handleChange(event) {
+  handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value
     })
-    event.preventDefault();
-  }
-  handleSubmit(event) {
-     // Connect to backend
-     alert(`E-mail: ${this.state.email}, Password: ${this.state.password}`);
     event.preventDefault();
   }
   render() {
@@ -25,11 +20,11 @@ class Login extends Component {
       <div className="container">
         <h3>Login to...</h3>
         <div className="row">
-          <form className="col s12" onSubmit={event => this.handleSubmit(event)}>
+          <form className="col s12" onSubmit={event => this.props.onSubmit(event)}>
             {/* ---password--- */}
             <div className="row">
               <div className="input-field col s12">
-                <input id="password" type="password" name='password' className="validate" autocomplete="off"
+                <input id="password" type="password" name='password' className="validate" autoComplete="off"
                   value={this.state.password} onChange={event => this.handleChange(event)} />
                 <label htmlFor="password">Password</label>
               </div>
@@ -37,7 +32,7 @@ class Login extends Component {
             {/* ---e-mail--- */}
             <div className="row">
               <div className="input-field col s12">
-                <input id="email" type="email" name='email' className="validate" autocomplete="off" value={this.state.email} onChange={event => this.handleChange(event)} />
+                <input id="email" type="email" name='email' className="validate" autoComplete="off" value={this.state.email} onChange={event => this.handleChange(event)} />
                 <label htmlFor="email">Email</label>
               </div>
             </div>
