@@ -3,15 +3,18 @@ import Main from './components/Main';
 import './App.css';
 import Navbar from './components/Navbar';
 
-
-
 class App extends Component {
-    handleSubmit = (event) => {
+    constructor(props) {
+        super(props);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleSubmit = (event, submitInfo) => {
         // Connect to backend
-        console.log(event.target.value)
-        alert(`E-mail: ${this.state.email}, Password: ${this.state.password}`);
+        alert(`E-mail: ${submitInfo.email}, Password: ${submitInfo.password}`);
         event.preventDefault();
     }
+
     render() {
         return (
             <div>
