@@ -5,11 +5,7 @@ import Navbar from './components/Navbar';
 
 class App extends Component {
 
-    handleSubmit = (event, submitInfo) => {
-        // Connect to backend
-        alert(`E-mail: ${submitInfo.email}, Password: ${submitInfo.password}`);
-        event.preventDefault();
-    }
+   
 
     render() {
         return (
