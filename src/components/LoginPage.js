@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Login from './Login';
 
 class LoginPage extends Component {
-    handleSubmit = (event) => {
+    handleLogin = (event) => {
         // Connect to backend
         alert(`E-mail: ${event.email}, Password: ${event.password}`);
         event.preventDefault();
@@ -10,7 +10,7 @@ class LoginPage extends Component {
     render() {
         return (
             <div>
-                <Login onSubmit={this.handleSubmit}  />
+                <Login onSubmit={this.handleLogin}  />
             </div>
         );
     }
