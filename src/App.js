@@ -5,14 +5,12 @@ import Navbar from './components/Navbar';
 
 class App extends Component {
 
-   
-
     render() {
         return (
             <div>
                 <Navbar />
                 <div className="container">
-                    <Main onSubmit={this.handleSubmit} />
+                    <Main />
                 </div>
             </div>
         );
