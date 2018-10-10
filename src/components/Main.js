@@ -8,8 +8,7 @@ class Main extends Component {
         return (
             <main>
                 <Switch>
-                    <Route exact path='/'
-                        render={(props) => <LoginPage {...props}  onSubmit={this.props.onSubmit} />} />
+                    <Route exact path='/' component={LoginPage} />
                     <Route exact path='/SignUp' component={SignUpPage} />
                 </Switch>
             </main>
