@@ -9,10 +9,10 @@ class LoginPage extends Component {
             // Connect to backend
             alert(`E-mail: ${submitInfo.email}, Password: ${submitInfo.password}`);
           }
-          
+
         return (
             <div>
-                <Login onSubmit={}  />
+                <Login onSubmit={onSubmit}  />
             </div>
         );
     }
