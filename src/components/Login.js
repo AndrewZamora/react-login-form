@@ -16,6 +16,9 @@ class Login extends Component {
     })
     event.preventDefault();
   }
+  handleSubmit=(event)=>{
+    event.preventDefault();
+  }
 
   render() {
     return (
