@@ -26,7 +26,7 @@ class Login extends Component {
       <div className="container">
         <h3>Login to...</h3>
         <div className="row">
-          <form className="col s12" onSubmit={(event) => this.handleSubmit(event)}>
+          <form className="col s12" onSubmit={event => this.handleSubmit(event)}>
             {/* ---password--- */}
             <div className="row">
               <div className="input-field col s12">
