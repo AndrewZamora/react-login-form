@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Main from './example/Main';
+import Main from './Main';
 import './App.css';
-import Navbar from './example/Navbar';
+import Navbar from './Navbar';
 
 class App extends Component {
 
