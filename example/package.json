@@ -12,6 +12,6 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts": "^2.0.5",
-    "react-login-form": "latest"
+    "@andrewzamora/react-login": "https://github.com/AndrewZamora/react-login-form.git"
   }
 }
