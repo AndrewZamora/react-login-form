@@ -6,6 +6,10 @@
     "lib",
     "README.md"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AndrewZamora/react-login-form"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "rm -rf lib && NODE_ENV=production babel src --out-dir lib --copy-files",
