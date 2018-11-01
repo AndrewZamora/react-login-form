@@ -3,9 +3,12 @@ import SignUp from './SignUp';
 
 class SignUpPage extends Component {
     render() {
+        const onClick = () => {
+            this.props.history.push("/");
+        };
         return (
             <div>
-               <SignUp/>
+                <SignUp onClick={onClick} />
             </div>
         );
     }
