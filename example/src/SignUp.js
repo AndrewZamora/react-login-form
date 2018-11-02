@@ -21,12 +21,10 @@ class SignUp extends Component {
         alert(`First Name:${this.state.firstName}, Last Name:${this.state.lastName}, E-mail:${this.state.email}, Password:${this.state.password}`);
         event.preventDefault();
     }
-
     handleClick(event) {
         event.preventDefault();
         this.props.onClick();
-      }
-
+    }
     render() {
         return (
             <div className="container">
