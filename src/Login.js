@@ -19,7 +19,10 @@ class Login extends Component {
     event.preventDefault();
     this.props.onSubmit(this.state);
   }
-
+  handleClick(event) {
+    event.preventDefault();
+    this.props.onClick();
+  }
   render() {
     return (
       <div className="container">
