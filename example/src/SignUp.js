@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 class SignUp extends Component {
     constructor(props) {
@@ -13,15 +12,19 @@ class SignUp extends Component {
     }
     handleChange(event) {
         this.setState({
-          [event.target.name]: event.target.value
+            [event.target.name]: event.target.value
         })
         event.preventDefault();
-      }
-      handleSubmit(event) {
+    }
+    handleSubmit(event) {
         // Connect to backend
         alert(`First Name:${this.state.firstName}, Last Name:${this.state.lastName}, E-mail:${this.state.email}, Password:${this.state.password}`);
         event.preventDefault();
-      }
+    }
+    handleClick(event) {
+        event.preventDefault();
+        this.props.onClick();
+    }
     render() {
         return (
             <div className="container">
@@ -49,7 +52,7 @@ class SignUp extends Component {
                         {/* ---e-mail--- */}
                         <div className="row">
                             <div className="input-field col s12">
-                                <input id="email" name="email" type="email" className="validate" autocomplete="off" onChange={event => this.handleChange(event)}/>
+                                <input id="email" name="email" type="email" className="validate" autocomplete="off" onChange={event => this.handleChange(event)} />
                                 <label htmlFor="email">Email</label>
                             </div>
                         </div>
@@ -57,7 +60,10 @@ class SignUp extends Component {
                     </form>
                 </div>
                 <div>
-                    <p>Already have an account?<Link to="/"> Login</Link></p>
+                    <p>Already have an account? </p>
+                    <a href="" onClick={event => this.handleClick(event)}>
+                        Log In
+            </a>
                 </div>
             </div>
         );
