@@ -19,7 +19,10 @@ class Login extends Component {
     event.preventDefault();
     this.props.onSubmit(this.state);
   }
-
+  handleClick(event) {
+    event.preventDefault();
+    this.props.onClick();
+  }
   render() {
     return (
       <div className="container">
@@ -47,6 +50,7 @@ class Login extends Component {
         </div>
         <div>
           <p>Need an account?</p>
+          <a href="" onClick={event => this.handleClick(event)}>Sign Up</a>
         </div>
       </div>
     );
