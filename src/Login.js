@@ -46,7 +46,7 @@ class Login extends Component {
           </form>
         </div>
         <div>
-          <p>Need an account?</p>
+          <p>Need an account? <a onClick={this.props.onSignUp} href="">Sign Up</a></p>
         </div>
       </div>
     );
