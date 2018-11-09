@@ -29,7 +29,7 @@ class Login extends Component {
             {/* ---password--- */}
             <div className="row">
               <div className="input-field col s12">
-                <input id="password" type="password" name='password' className="validate" autocomplete="off"
+                <input id="password" type="password" name='password' className="validate" autoComplete="off"
                   value={this.state.password} onChange={(event) => this.handleChange(event)} />
                 <label htmlFor="password">Password</label>
               </div>
